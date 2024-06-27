@@ -18,10 +18,9 @@ export default function Home() {
   }
   return (
     <div>
-      <h1>events , function , state {ok}</h1>
-      <button onClick={()=>fruit()}>click</button>
-      <Inner/>
-      {Inner()}
+      <h1>
+        Basic routing
+      </h1>
     </div>
   );
 }
