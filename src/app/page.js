@@ -17,6 +17,8 @@ export default function Home() {
       <Link href="login">login</Link>
       <br />   <Link href="logout">logout</Link>
       <br />   <Link href="about">about</Link>
+      <br />   <Link href="about/student">aboutstudent</Link>
+      <br />   <Link href="about/teacher">aboutteacher</Link>
  <br />
       <button onClick={()=>navigate("/login")}>
         go to login
