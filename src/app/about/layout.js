@@ -1,17 +1,29 @@
+"use client"
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 export default function Layout({ children }) {
+
+    const path = usePathname();
+    console.log(path);
     return (
         <div>
+    
+            { path!="/about/student"?
+            <div>
 
-            <h1>About</h1>
+
+                
+                <h2>About</h2>
             <Link href="student">student</Link>
             <Link href="teacher">teacher</Link>
 
-           <h2>
-            
-            {children}
-            </h2> 
-        </div>
+            </div>:null
+
+            }
+            <h2>
+
+                {children}
+            </h2>
+        </div >
     )
 };
