@@ -19,12 +19,23 @@ export default function Product() {
         fetchData();
     }, []);
 
+
+    const [color,setcolor]=useState(0);
+    const arr = ["green","yellow", "blue","orange","red"];
+
+    const func = () => {
+        setcolor((color+1)%5);
+        document.body.style.backgroundColor = arr[color];
+    }
     return (
         <div>
             <h2 className={custom.h1}>Fetch data from API in client component</h2>
             <h3 className={custom.h3}>
                 Product list
             </h3>
+            <button onClick={func}>click
+
+            </button>
             {
                 product.map((item,index)=>(
                     <div key={index} className={outside.h2}>
