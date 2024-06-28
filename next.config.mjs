@@ -4,7 +4,7 @@ const nextConfig = {
         domains: ['adgaurportfolio.vercel.app'],
         
     },
-    output:'export',
+    // output:'export',
 };
 
 export default nextConfig;
