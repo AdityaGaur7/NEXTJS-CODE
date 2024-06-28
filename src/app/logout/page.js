@@ -1,4 +1,7 @@
+
+// import { redirect } from "next/navigation"
 export default function Logout() {
+    // redirect("/")
     return (<h1>logout</h1>)
 };
 export function generateMetadata(){
