@@ -20,7 +20,7 @@ export default function Product() {
 
     return (
         <div>
-            <h2>Fetch data from API</h2>
+            <h2>Fetch data from API in client component</h2>
             <h3>
                 Product list
             </h3>
