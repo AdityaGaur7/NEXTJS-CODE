@@ -1,4 +1,4 @@
-
+import Button from "./button.js"
 
 async function fetchData() {
     
@@ -12,7 +12,7 @@ async function fetchData() {
 export default async function Productcollection() {
   
    let products = await fetchData();
-   console.log( products);
+//    console.log( products);
 
     return (
         <div>
@@ -27,6 +27,7 @@ export default async function Productcollection() {
                         <h3>
                             Name: {item.title}
                         </h3>
+                      <Button price={item.price}/>
                     </div>
                 ))
             }
