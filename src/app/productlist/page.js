@@ -10,7 +10,7 @@ export default function Product() {
 
                 let response = await fetch("https://dummyjson.com/products");
                 let data = await response.json();
-                console.log(data.products);
+                // console.log(data.products);
                 setproduct(data.products);
             }catch(err){
                 console.log(err);
