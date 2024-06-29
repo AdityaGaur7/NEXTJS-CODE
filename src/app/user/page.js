@@ -1,15 +1,17 @@
 "use client"
 
-import Script from "next/script"
+// import Script from "next/script"
 
 
 export default function Location() {
+
+    console.log(process.env);
     return (
         <div>
-            <Script
+            {/* <Script
             src="/script.js"
             />
-                
+                 */}
                 Location
 
         </div>
