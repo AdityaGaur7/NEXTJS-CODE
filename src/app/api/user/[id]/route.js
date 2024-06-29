@@ -12,3 +12,14 @@ export async function GET(request,response){
 //         userdata.length==0?(result:,success:"false"):(result:userdata,success:true),{status:200}
 // );
 }
+
+export async function PUT(req,res){
+    let payload = await req.json();
+    let id = res.params.id;
+    payload.id = id;
+    console.log(payload);
+    if(!payload.id || !payload.name || !payload.age ||!payload.email){
+        return NextResponse.json({result:"required data not found ",success:false},{status:400})
+    }
+    return NextResponse.json({result:payload,success:true},{status:200})
+}
