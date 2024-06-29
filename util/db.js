@@ -19,4 +19,5 @@ export const user=[
         age:'20',
         email:'ees@gmail.com',
     }
+
 ]

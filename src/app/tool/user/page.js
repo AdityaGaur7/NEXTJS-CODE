@@ -5,7 +5,7 @@
 
 export default function Location() {
 
-    console.log(process.env);
+    // console.log(process.env);
     return (
         <div>
             {/* <Script
