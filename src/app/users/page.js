@@ -16,11 +16,9 @@ export default async function First() {
             <h1>Users</h1>
             {
                 users.map((it,index)=>(<div>
-                    <h3>
-
-                        {it.name}
-                    </h3>
-                    <Link href={`users/${it.id}`}>{it.name}</Link>
+                  
+                  <p>  <Link href={`users/${it.id}`}>{it.name}</Link>
+                  <Link href={`users/${it.id}/update`}>Edit</Link></p>
                 </div>)
 
 
