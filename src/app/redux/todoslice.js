@@ -8,7 +8,8 @@ const Slice = createSlice({
     name: 'todolist',
     initialState,
     reducers: {
-        addtodos: () => {
+        addtodos: (state,action) => {
+            //  console.log(action);
             const data = {
                 id: nanoid,
                 name: action.payload
