@@ -14,18 +14,19 @@ export default function Home() {
       <h1>
         Basic routing
       </h1>
-      <Link href="login">login</Link>
-      <br />   <Link href="logout">logout</Link>
+      <Link href="/addproduct">Add</Link><br/>
+      <Link href="/products">List</Link>
+      {/* <br />   <Link href="logout">logout</Link>
       <br />   <Link href="about">about</Link>
       <br />   <Link href="about/student">aboutstudent</Link>
-      <br />   <Link href="about/teacher">aboutteacher</Link>
+      <br />   <Link href="about/teacher">aboutteacher</Link> */}
  <br />
-      <button onClick={()=>navigate("/login")}>
+      {/* <button onClick={()=>navigate("/login")}>
         go to login
       </button>
       <button onClick={()=>navigate("/logout")}>
         go to logout
-      </button>
+      </button> */}
       <br />
     </div>
   );
