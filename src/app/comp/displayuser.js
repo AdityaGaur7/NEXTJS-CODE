@@ -1,26 +1,32 @@
 "use client"
 
-import { useSelector } from 'react-redux'
-export default function Display(){
-    const userdata = useSelector((data)=>data.reducer.users);
+import { useDispatch, useSelector } from 'react-redux'
+import { removeuser } from '../redux/slice';
+export default function Display() {
+
+    const userdata = useSelector((data) => data.reducer.users);
+    const dispatch = useDispatch();
     console.log(userdata);
-  return (
-    <div>
-        <hr/>
-        <h1>Display user</h1>
+  
+    return (
         <div>
-            {
-                userdata.map((item,index)=>(
-                  <div>
+            <hr />
+            <h1>Display user</h1>
+            <div>
+                {
+                    userdata.map((item, index) => (
+                        <div style={{display:'flex'}}>
 
-                      {item.name}
-                    
-                  </div>
-                ))
-            }
+                            <h2>{item.name}</h2>
+                            
+                            <button onClick={()=> dispatch(removeuser(item.id))}>delete</button>
+
+                        </div>
+                    ))
+                }
+            </div>
+
         </div>
-
-    </div>
-  )
+    )
 }
 
