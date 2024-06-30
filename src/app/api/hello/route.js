@@ -24,6 +24,6 @@ export async function POST(req){
       let product = new Product(payload);
       const res  = await product.save();
 
-      return NextResponse.json({result:res,sucess:true});
+      return NextResponse.json({result:res,success:true});
 
 }
