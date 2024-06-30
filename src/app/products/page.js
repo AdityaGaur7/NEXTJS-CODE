@@ -9,6 +9,7 @@ const getproduct = async () => {
 }
 const Page = async () => {
 
+    
     let data = await getproduct();
     console.log(data);
     return (
