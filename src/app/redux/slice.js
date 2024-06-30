@@ -1,7 +1,22 @@
+const { createSlice, nanoid } = require("@reduxjs/toolkit");
 
-const { configureStore } = require("@reduxjs/toolkit");
-// slice ke ander action and reducer hote hai smjhe daya 
-export const store = configureStore({
-    reducer:{}
+const initialState = {
+    users:[]
+}
+const Slice = createSlice({
+    name:"adduserslice",
+    initialState,
+    reducers:{
+        adduser:(state,action)=>{
+            console.log(action);
+            const data = {
+                id:nanoid(),
+                name:action.payload,
 
+            }
+            state.users.push(data);
+        }
+    }
 })
+export const {adduser}=Slice.actions;
+export default Slice.reducer;
