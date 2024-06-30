@@ -2,7 +2,7 @@ import {Product} from "@/app/lib/model/product";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
-const url = "mongodb://localhost:27017/databasedb";
+const url = process.env.MONGO;
 export async function GET(){
       
     
@@ -17,4 +17,13 @@ export async function GET(){
    }
    
     return NextResponse.json({result:data});
+}
+export async function POST(req){
+      const payload =await req.json();
+      await mongoose.connect(url);
+      let product = new Product(payload);
+      const res  = await product.save();
+
+      return NextResponse.json({result:res,sucess:true});
+
 }
