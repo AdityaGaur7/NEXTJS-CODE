@@ -15,7 +15,7 @@ export default function Display() {
             <div>
                 {
                     userdata.map((item, index) => (
-                        <div style={{display:'flex'}}>
+                        <div style={{display:'flex'}} key={item.id}>
 
                             <h2>{item.name}</h2>
                             

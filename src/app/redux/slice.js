@@ -45,6 +45,8 @@ const Slice = createSlice({
             })
 
             state.users = data;
+            let userdata = JSON.stringify(data);
+            localStorage.setItem("users",userdata);
            
 
         }

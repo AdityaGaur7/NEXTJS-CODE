@@ -26,7 +26,7 @@ const Addtodo = () => {
         {
             tododata.length && tododata.map((item)=>(
                 <div>
-                    <h1>{item.name}</h1>
+                    <h1 key={item.id}>{item.name}</h1>
                 </div>
             ))
         }
