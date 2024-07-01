@@ -1,8 +1,10 @@
 "use client"
 import { useEffect, useState } from "react"
-
+import {useRouter} from "next/navigation";
 
 export default function First(props) {
+
+    const router = useRouter();
     const [name,setName]=useState("");
     const [price,setprice]=useState("");
     const [category,setcategory]=useState("");
@@ -39,7 +41,10 @@ export default function First(props) {
         })
          res =await res.json();
     console.log(res);
-        if(res.success)alert("new product updated");
+        if(res.success){
+            alert("new product updated");
+            router.push("/products")
+        }
     }
  
     return (

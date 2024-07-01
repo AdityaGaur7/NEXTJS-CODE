@@ -24,3 +24,13 @@ export async function GET(req,res){
 
     return NextResponse.json({result:data,success:true});
 }
+export async function DELETE(req,res){
+  
+    
+    const productid = res.params.helloid;
+    const filter ={_id:productid};
+    await mongoose.connect(url);
+    const data = await Product.deleteOne(filter);
+
+    return NextResponse.json({result:data,success:true});
+}
