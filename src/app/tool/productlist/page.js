@@ -1,7 +1,6 @@
 "use client"
 import{ useEffect, useState } from "react";
 import custom from "./custom.module.css"
-import outside from "@/app/style/outside.module.css"
 export default function Product() {
     const [product,setproduct]=useState([]);
     useEffect(() => {
@@ -38,7 +37,7 @@ export default function Product() {
             </button>
             {
                 product.map((item,index)=>(
-                    <div key={index} className={outside.h2}>
+                    <div key={index}>
                         <p>Name:{item.title}</p>
                         <p>Price:{item.price}</p>
                         <p>Description{item.description}</p>
