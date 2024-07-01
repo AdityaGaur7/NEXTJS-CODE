@@ -14,3 +14,13 @@ export async function PUT(req,res){
 
     return NextResponse.json({result:data,success:true});
 }
+export async function GET(req,res){
+  
+    
+    const productid = res.params.helloid;
+    const filter ={_id:productid};
+    await mongoose.connect(url);
+    const data = await Product.findById(filter);
+
+    return NextResponse.json({result:data,success:true});
+}
