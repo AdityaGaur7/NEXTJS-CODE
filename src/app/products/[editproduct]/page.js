@@ -8,16 +8,17 @@ export default function First(props) {
     const [category,setcategory]=useState("");
     const [color,setcolor]=useState("");
     const [company,setcompany]=useState("");
-    let id = ""
+    
    
 
    
     useEffect(()=>{
         console.log(props.params.editproduct);
-        id = props.params.editproduct;
+      const  id = props.params.editproduct;
         getsingleproduct(id)
     },[])
     const getsingleproduct = async()=>{
+        const  id = props.params.editproduct;
         let res =await fetch(`http://localhost:3000/api/hello/${id}`);
         res =await res.json();
         let ans = res.result;
@@ -30,14 +31,14 @@ export default function First(props) {
            setcompany(ans.company);
         }
     }
-    const Update = async(id)=>{
-        // console.log(name,price,category,color,company)
+    const Update = async()=>{
+        const  id = props.params.editproduct;
         let res = await fetch(`http://localhost:3000/api/hello/${id}`,{
             method:"PUT",
             body:JSON.stringify({name,price,category,color,company})
         })
          res =await res.json();
-    console.log(res.success);
+    console.log(res);
         if(res.success)alert("new product updated");
     }
  
